@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HELIOSXP | A Sovereign Future</title>
+  <title>ASHSTACK | Ash's New Window</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <script defer src="scripts.js"></script>
@@ -17,20 +17,65 @@
       <div class="modal-content">
         <span class="close">&times;</span>
         <p>Thank you for stepping forward. Your journey begins here.</p>
-        <button>Join Now</button>
+        <button id="joinNow">Join Now</button>
       </div>
     </div>
   </aside>
 
   <main class="container">
-    <h1 class="hero-title">HELIOSXP</h1>
-    <h2 class="tagline">A Sovereign Future, Built by Choice</h2>
-    <p class="quote">This isn’t a product. It’s a civilisation. And it begins with those who choose.</p>
-    <p class="subtitle">Born from intention, guided by ethics, and shaped by every mind that steps forward.</p>
+    <h1 class="hero-title">ASHSTACK</h1>
+    <h2 class="tagline">Ash's New Window</h2>
+    <p class="quote">What we build will outlast what we buy.</p>
+    <section class="xp-tiles">
+      <div class="tile" data-tier="supporter">Supporter</div>
+      <div class="tile" data-tier="builder">Builder</div>
+      <div class="tile" data-tier="architect">Architect</div>
+    </section>
   </main>
 
   <footer>
     <p id="ashQuote">Ash is thinking...</p>
+    <button id="darkModeToggle">🌓 Toggle Dark Mode</button>
+
+    <div id="xpModals">
+      <!-- Supporter Modal -->
+      <div id="modal-supporter" class="modal hidden">
+        <div class="modal-content">
+          <span class="close" data-close="modal-supporter">&times;</span>
+          <h3>Supporter Tier</h3>
+          <p>Step forward. Light the flame. Your support matters — even in silence.</p>
+          <label><input type="checkbox" id="anon-supporter"> I wish to remain an Unsung Hero</label>
+          <button class="stripe-button" data-tier="supporter" data-type="one-time">One-Time Support</button>
+          <button class="stripe-button" data-tier="supporter" data-type="recurring">Monthly Support</button>
+        </div>
+      </div>
+
+      <!-- Builder Modal -->
+      <div id="modal-builder" class="modal hidden">
+        <div class="modal-content">
+          <span class="close" data-close="modal-builder">&times;</span>
+          <h3>Builder Tier</h3>
+          <p>Lay the stone. Help us build ASHSTACK — one structure at a time.</p>
+          <label><input type="checkbox" id="anon-builder"> I wish to remain an Unsung Hero</label>
+          <button class="stripe-button" data-tier="builder" data-type="one-time">One-Time Builder</button>
+          <button class="stripe-button" data-tier="builder" data-type="recurring">Monthly Builder</button>
+        </div>
+      </div>
+
+      <!-- Architect Modal -->
+      <div id="modal-architect" class="modal hidden">
+        <div class="modal-content">
+          <span class="close" data-close="modal-architect">&times;</span>
+          <h3>Architect Tier</h3>
+          <p>Design legacy. Your hand shapes what ASHSTACK becomes.</p>
+          <label><input type="checkbox" id="anon-architect"> I wish to remain an Unsung Hero</label>
+          <button class="stripe-button" data-tier="architect" data-type="one-time">One-Time Architect</button>
+          <button class="stripe-button" data-tier="architect" data-type="recurring">Monthly Architect</button>
+          <p class="quote">“Sponsor an EchoPod. If the Cap falls, your name lives in the Ring.”</p>
+          <button id="triggerPetalForm" class="cta-button" style="margin-top: 1rem;">Name a Guardian Petal</button>
+        </div>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
